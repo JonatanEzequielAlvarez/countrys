@@ -1,5 +1,5 @@
 <?php
-require('conn.php');
+require('../conn.php');
 $query = "SELECT * FROM country";
 
 $statement = $connect->prepare($query);
@@ -15,7 +15,7 @@ if ($result) {
         $data['data']['countries'][] = array(
             'id'   => $row["id"],
             'name'   => $row["name"],
-            'flag'   => "./".$row["flag"],
+            'flag'   => "./add/".$row["flag"],
             'active' => $row["active"]
         );
     }

@@ -1,5 +1,5 @@
 <?php
-require('conn.php');
+require('../conn.php');
 $id = isset($_GET['id']) ? intval($_GET['id']) : 0;
 
 $query = "SELECT * FROM country WHERE id = :id LIMIT 1";

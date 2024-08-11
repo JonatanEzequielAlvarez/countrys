@@ -1,5 +1,5 @@
 <?php
-require('conn.php');
+require('../conn.php');
 
 $id = isset($_POST['id']) ? intval($_POST['id']) : 0;
 

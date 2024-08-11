@@ -1,12 +1,12 @@
 <?php
-$connect = new PDO('mysql:host=localhost;dbname=countrys', 'root', '');
+require('../conn.php');
 
 $name = isset($_POST['name']) ? $_POST['name'] : '';
 $active = isset($_POST['active']) ? intval($_POST['active']) : 0;
 $flag = '';
 
 if (!empty($name) && isset($_FILES['flag']) && $_FILES['flag']['error'] === UPLOAD_ERR_OK) {
-    $uploadDir = 'uploads/';
+    $uploadDir = './uploads/';
     $uploadFile = $uploadDir . basename($_FILES['flag']['name']);
     $imageFileType = strtolower(pathinfo($uploadFile, PATHINFO_EXTENSION));
 
